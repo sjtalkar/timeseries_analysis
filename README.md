@@ -13,8 +13,14 @@ A lookahead is any way that information about what will happen in the future mig
 MultiIndex from cross product in Pandas : Panel Data
 ```complete_idx = pd.MultiIndex.from_product((set(emails.week), set(emails.member)))```
 
-**Shift the target forward to predict**
+**[Shift the target forward to predict](https://stackoverflow.com/questions/53335567/use-pandas-shift-within-a-group)**
 ```
 df['target'] = df.amount.shift(1)
+
+df['prev_value'] = df.groupby('object')['value'].shift()
+
+Just beware, it is safer to sort dataframe beforehand: df.sort_values(by=['period']).groupby('object')['value'].shift()
+
+
 ```
 
