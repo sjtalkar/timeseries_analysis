@@ -13,3 +13,8 @@ A lookahead is any way that information about what will happen in the future mig
 MultiIndex from cross product in Pandas : Panel Data
 ```complete_idx = pd.MultiIndex.from_product((set(emails.week), set(emails.member)))```
 
+**Shift the target forward to predict**
+```
+df['target'] = df.amount.shift(1)
+```
+
