@@ -24,3 +24,12 @@ Just beware, it is safer to sort dataframe beforehand: df.sort_values(by=['perio
 
 ```
 
+### Summary 1
+- Recalibrate the resolution of our data to suit our question. Often data comes with more specific time information than we need.
+
+- Understand how we can avoid lookahead by not using data for timestamps that produce the data’s availability.
+
+- Record all relevant time periods even if “nothing happened.” A zero count is just as informative as any other count.
+
+- Avoid lookahead by not using data for timestamps that produce information we shouldn’t yet know about. (shift prediction)
+
