@@ -185,3 +185,18 @@ The sum of the values in a time series that occur more than once
 The length of the longest consecutive subsequence that is above or below the mean
 
 The earliest occurrence within the time series of the minimum or maximum value
+
+
+## Deep learning
+Many of the headaches of preprocessing data to fit a model’s assumptions are gone when deep learning models are used:
+
+There is no requirement of stationarity.
+
+There is no need to develop the art and skill of picking parameters, such as assessing seasonality and order of a seasonal ARIMA model.
+
+There is no need to develop a hypothesis about the underlying dynamics of a system, as is helpful with state space modeling.
+
+Machine learning models rarely are developed for time series problems, whereas deep learning offers a great deal of flexibility to develop architectures specific to temporal data.
+
+Also, deep learning does best with numerical inputs in different channels all scaled to similar values between –1 and 1. This means that you will need to preprocess your data even though it’s not theoretically required. Also, you need to preprocess it in a way that avoids lookahead,
+
